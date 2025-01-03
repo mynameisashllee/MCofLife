@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game-ish of life</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/amethyst.png" type="image/x-icon">
+</head>
+<body>
+    <h1>the minecraft of life</h1>
+
+    <!-- Info Button -->
+    <button id="info-button"></button>
+
+    <!-- Info Text Section -->
+    <div id="info-section">
+        <h3>hi!</h3>
+        <p>have you ever wondered how <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life">game of life</a> would work in 20x20 and with minecraft blocks? probably not.</p>
+        <p>use the pixels to set up an initial state and watch the life unfold!</p>
+        <p>merry christmas and happy new year! ♥️</p>
+    </div>
+
+    <img id="divider" src="assets/skyline.gif" alt="divider"/>
+
+    <div id="palette">
+        <!-- Replace with the images you drew for each block -->
+        <div class="block-selector grass" data-type="grass"></div>
+        <div class="block-selector amethyst" data-type="amethyst"></div>
+        <div class="block-selector stone" data-type="stone"></div>
+        <div class="block-selector sand" data-type="sand"></div>
+        <div class="block-selector water" data-type="water"></div>
+    </div>
+
+    <div id="game-container"></div>
+
+    <div id="controls">
+        <button id="start"></button>
+        <button id="pause""></button>
+        <button id="reset"></button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
