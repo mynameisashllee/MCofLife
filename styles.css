@@ -1,0 +1,162 @@
+@font-face { 
+    font-family: Minecraft; src: url('assets/Minecraft.ttf'); 
+}
+
+body {
+    font-family: Minecraft, sans-serif;
+    background: #9e6ef8; /* Radial gradient */
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 36px;
+}
+
+#divider {
+    margin: 10px 0; /* Reduced space around the divider */
+    max-width: 80%;
+}
+
+#game-container {
+    display: grid;
+    justify-content: center;
+    margin: 10px auto; /* Reduced margin */
+    border: 1px solid #555;
+    background-color: #333;
+    grid-template-rows: repeat(20, 20px);
+    grid-template-columns: repeat(20, 20px);
+    gap: 1px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.block-selector:not(.selected) {
+    filter: grayscale(100%); /* Greyscale all block selectors that are not selected */
+}
+
+.block-selector.selected {
+    filter: none; /* Removes grayscale on the selected block */
+}
+.block-selector.grass {
+    background-image: url('assets/dirt_picker.png');
+}
+
+.block-selector.amethyst {
+    background-image: url('assets/amethyst_picker.png');
+}
+
+.block-selector.stone {
+    background-image: url('assets/stone_picker.png');
+}
+
+.block-selector.sand {
+    background-image: url('assets/sand_picker.png');
+}
+
+.block-selector.water {
+    background-image: url('assets/water_picker.png');
+}
+
+.cell.grass {
+    background-image: url('assets/dirt.png');
+}
+
+.cell.amethyst {
+    background-image: url('assets/amethyst.png');
+}
+
+.cell.stone {
+    background-image: url('assets/stone.png');
+}
+
+.cell.sand {
+    background-image: url('assets/sand.png');
+}
+
+.cell.water {
+    background-image: url('assets/water.png');
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+button:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+#start {
+    background-image: url('assets/start.png');
+}
+
+#pause {
+    background-image: url('assets/pause.png');
+}
+
+#reset {
+    background-image: url('assets/reset.png');
+}
+
+#palette {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+.block-selector {
+    width: 65px;
+    height: 85px; /* Adjusted size */
+    margin: 0 5px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+#info-button {
+    background-image: url('assets/info.png');
+    border-radius: 50%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#info-section {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    color: white;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
